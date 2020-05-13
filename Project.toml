@@ -1,0 +1,13 @@
+name = "SphericalLearning"
+uuid = "0334b6d4-66f4-4b89-911d-601857417932"
+authors = ["Colin LaMont"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
