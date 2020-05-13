@@ -4,7 +4,6 @@ using LinearAlgebra
 using SpecialFunctions
 
 
-
 export helmholtzG, helmholtzGapprox, hologram
 
 function sphericalbesselj(nu, x::T) where {T}

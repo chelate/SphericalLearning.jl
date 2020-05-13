@@ -1,6 +1,4 @@
 # Dependencies
-
-using Pkg
 # Pkg.add("WignerSymbols")
 # Pkg.add("LinearAlgebra")
 # Pkg.add("JuliennedArrays")
@@ -9,8 +7,6 @@ using Pkg
 # Pkg.add("Makie")
 # Pkg.add("Colors")
 # Pkg.add("SpecialFunctions")
-
-module SphericalTensors
 
 
 using WignerSymbols
@@ -154,11 +150,9 @@ function harmonic(y::Spherical{L}, point::Array) where L
     # Is normalization over sphere ∫dΩ conj(y(Ω)))* y(Ω) = dot(y,y)
 end
     
-function harmonic(point::Array, L::Int)
+function harmonic(L::Int, point::Array)
     # returns a spherical tensor composed of spherical harmonics
     # Ylm(phat) = y[m] c.f. W.K. Tung 8.3 - 15
     conj(rotate(Spherical{L}(), -zAxisTo(point))*sqrt((2L + 1)/(4π)))
     # orthogonality relations ∫dΩ conj(y(Ω)[m])* y(Ω)[m'] = δ(m',m)
-end
-
 end

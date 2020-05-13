@@ -3,6 +3,16 @@ uuid = "0334b6d4-66f4-4b89-911d-601857417932"
 authors = ["Colin LaMont"]
 version = "0.1.0"
 
+[deps]
+Colors = "5ae59095-9a9b-59fe-a467-6f913c188581"
+GeometryTypes = "4d00f742-c7ba-57c2-abde-4428a4b178cb"
+JuliennedArrays = "5cadff95-7770-533d-a838-a1bf817ee6e0"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Makie = "ee78f7c6-11fb-53f2-987a-cfe4a2b5a57a"
+SpecialFunctions = "276daf66-3868-5448-9aa4-cd146d93841b"
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+WignerSymbols = "9f57e263-0b3d-5e2e-b1be-24f2bb48858b"
+
 [compat]
 julia = "1"
 
