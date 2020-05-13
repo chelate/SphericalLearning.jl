@@ -1,5 +1,7 @@
 module SphericalLearning
+include("SphericalTensor.jl")
+include("SphericalPlotting.jl")
+include("HelmholtzExpansion.jl")
 
-greet() = print("Hello World!")
 
 end # module
