@@ -49,17 +49,17 @@ function hologram(l,x;k=1,R=1) # projection on sphere
     # outputs a spherical tensor a, order l
     # can reconstruct it's portion of the image with harmonic(a,x)
     if norm(x) < R
-        im*k*conj(helmR(l,x;k=1))*sphericalhankel1(l,k*R)
+        im*k*conj(helmR(l,x;k=k))*sphericalhankel1(l,k*R)
     else
-        im*k*conj(sphericalbesselj(l, k*R)*helmS(l,x;k=1))
+        im*k*conj(sphericalbesselj(l, k*R)*helmS(l,x;k=k))
     end
 end
 
 function helmholtzGapprox(x,y;k=1,lmax=10)
     if norm(x) < norm(y)
-        sum(im*k*dot(helmR(l,x;k=k),helmS(y,l;k=k)) for l in 0:lmax)
+        sum(im*k*dot(helmR(l,x;k=k),helmS(l,y;k=k)) for l in 0:lmax)
     else
-        sum(im*k*dot(helmR(l,y;k=k),helmS(x,l;k=k)) for l in 0:lmax)
+        sum(im*k*dot(helmR(l,y;k=k),helmS(l,x;k=k)) for l in 0:lmax)
     end
 end
 
